@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
             //close this activity
             finish();
             //opening profile activity
-            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+            startActivity(new Intent(getApplicationContext(), SideNavigationDrawer.class));
         }
 
         //initializing views
@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
         //if the email and password are not empty
         //displaying a progress dialog
 
-        progressDialog.setMessage("Registering Please Wait...");
+        progressDialog.setMessage("Login Please Wait...");
         progressDialog.show();
 
         //logging in the user
@@ -92,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
                             //start the profile activity
                             finish();
-                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                            startActivity(new Intent(getApplicationContext(), SideNavigationDrawer.class));
                         } else{
                             //display some message here
                             Toast.makeText(LoginActivity.this,"Login Error",Toast.LENGTH_LONG).show();
