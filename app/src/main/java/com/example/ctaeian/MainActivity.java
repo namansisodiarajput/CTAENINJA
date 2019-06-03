@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //FirebaseApp.initializeApp(this);
+        FirebaseApp.initializeApp(this);
 
 
         Intent intent = new Intent(getApplicationContext(),SideNavigationDrawer.class);

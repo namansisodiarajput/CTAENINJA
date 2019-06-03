@@ -41,8 +41,6 @@ public class SigninActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
 
-
-
         //initializing firebase auth object
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -53,7 +51,7 @@ public class SigninActivity extends AppCompatActivity{
             finish();
 
             //and open profile activity
-            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+            startActivity(new Intent(getApplicationContext(), SideNavigationDrawer.class));
         }
 
         //initializing views
@@ -62,8 +60,6 @@ public class SigninActivity extends AppCompatActivity{
 
         buttonLoginPage = (Button) findViewById(R.id.buttonLoginPage);
         buttonSignup = (Button) findViewById(R.id.buttonSignup);
-
-
 
         progressDialog = new ProgressDialog(this);
     }
@@ -99,7 +95,7 @@ public class SigninActivity extends AppCompatActivity{
                         //checking if success
                         if(task.isSuccessful()){
                             finish();
-                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                            startActivity(new Intent(getApplicationContext(), SideNavigationDrawer.class));
                         }else{
                             //display some message here
                             Toast.makeText(SigninActivity.this,"Registration Error",Toast.LENGTH_LONG).show();
