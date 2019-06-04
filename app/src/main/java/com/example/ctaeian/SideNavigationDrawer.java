@@ -82,8 +82,8 @@ public class SideNavigationDrawer extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
             fragmentClass = HomeFragment.class;
-        } else if (id == R.id.nav_gallery) {
-
+        } else if (id == R.id.nav_notes) {
+            fragmentClass = NotesFragment.class;
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
