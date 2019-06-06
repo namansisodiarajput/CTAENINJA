@@ -7,6 +7,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,13 +30,7 @@ import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
 public class NotesFragment extends Fragment {
 
-    FirebaseStorage storage;
-    // Create a storage reference from our app
-    StorageReference storageRef;
-
-    Button button;
-
-
+    Button firstYearButton,secondYearButton,thirdYearButton,fourthYearButton;
 
     public NotesFragment() {
         // Required empty public constructor
@@ -44,10 +42,6 @@ public class NotesFragment extends Fragment {
         super.onCreate(savedInstanceState);
         getActivity().setTitle("Notes");
 
-        storage = FirebaseStorage.getInstance();
-        storageRef = storage.getReference();
-
-
     }
 
     @Override
@@ -55,57 +49,55 @@ public class NotesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_notes, container, false);
-        button = (Button)view.findViewById(R.id.downloadingButton);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        firstYearButton = (Button) view.findViewById(R.id.firstYearButton);
+        secondYearButton = (Button) view.findViewById(R.id.secondYearButton);
+        thirdYearButton = (Button) view.findViewById(R.id.thirdYearButton);
+        fourthYearButton = (Button) view.findViewById(R.id.fourthYearButton);
+
+        firstYearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                downloadFileFromFirebaseStroage();
+                onButtonSelection(v.getId());
             }
         });
+
+
         return  view;
     }
 
+    private void onButtonSelection(int id) {
+
+        Fragment fragment = null;
+        Class fragmentClass = null;
+
+        if(id == R.id.firstYearButton) {
+            fragmentClass = FirstYearNotesFragment.class;
+        } else if(id == R.id.secondYearButton) {
+
+        } else if(id == R.id.thirdYearButton) {
+
+        } else  if(id == R.id.fourthYearButton) {
+
+        }
+
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        // Insert the fragment by replacing any existing fragment
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+
+    }
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 
-
-    public void downloadFileFromFirebaseStroage() {
-
-        StorageReference childRef = storageRef.child("images.zip");
-        childRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                String url = uri.toString();
-                downloadfile(getContext(),"images","zip",DIRECTORY_DOWNLOADS,url);
-                Toast.makeText(getContext(),"File is downloading",Toast.LENGTH_LONG).show();
-
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getContext(),"Error Occured : "+e.getMessage(),Toast.LENGTH_LONG).show();
-            }
-        });
-
-    }
-
-    public void downloadfile(Context context, String fileName, String fileExtension, String destinationDirectory, String url) {
-
-        DownloadManager downloadManager = (DownloadManager)context.getSystemService(Context.DOWNLOAD_SERVICE);
-
-        Uri uri = Uri.parse(url);
-        DownloadManager.Request request = new DownloadManager.Request(uri);
-
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.setDestinationInExternalFilesDir(context,destinationDirectory,fileName+fileExtension);
-
-        downloadManager.enqueue(request);
-
-
-    }
 
 }
