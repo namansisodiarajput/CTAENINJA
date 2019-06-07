@@ -4,28 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstYearNotesFragment">
+    tools:context=".FirstYearNotesFragment"
+    android:background="#66BB6A">
 
     <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/notes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:background="#66BB6A">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/CS_FIRSTYEAR_BUTTON"
@@ -35,7 +43,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="8dp"
                 android:text="CS"
-                android:textSize="18sp"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:background="@color/colorPrimaryDark"
                 tools:layout_editor_absoluteX="118dp"
                 tools:layout_editor_absoluteY="250dp" />
 
@@ -47,7 +57,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="8dp"
                 android:text="PHYSICS"
-                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="24sp"
                 tools:layout_editor_absoluteX="118dp"
                 tools:layout_editor_absoluteY="250dp" />
 
@@ -59,7 +71,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="8dp"
                 android:text="ELECTRICAL"
-                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="24sp"
                 tools:layout_editor_absoluteX="118dp"
                 tools:layout_editor_absoluteY="250dp" />
 
@@ -71,7 +85,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="8dp"
                 android:text="MECHANICS"
-                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="24sp"
                 tools:layout_editor_absoluteX="118dp"
                 tools:layout_editor_absoluteY="250dp" />
 
@@ -83,7 +99,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="8dp"
                 android:text="ENGINEERING DRAWING"
-                android:textSize="18sp"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:background="@color/colorPrimaryDark"
                 tools:layout_editor_absoluteX="118dp"
                 tools:layout_editor_absoluteY="250dp" />
 
@@ -95,7 +113,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="8dp"
                 android:text="MECHANICAL"
-                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="24sp"
                 tools:layout_editor_absoluteX="118dp"
                 tools:layout_editor_absoluteY="250dp" />
 
@@ -107,7 +127,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="8dp"
                 android:text="CHEMISTRY"
-                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:background="@color/colorPrimaryDark"
+                android:textSize="24sp"
                 tools:layout_editor_absoluteX="118dp"
                 tools:layout_editor_absoluteY="250dp" />
         </LinearLayout>

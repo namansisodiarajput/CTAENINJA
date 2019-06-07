@@ -21,7 +21,7 @@ import com.google.firebase.storage.StorageReference;
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
 
-public class FirstYearPreviousPaperFragment extends Fragment {
+public class SecondYearPreviousPaperFragment extends Fragment {
 
     FirebaseStorage storage;
     // Create a storage reference from our app
@@ -30,16 +30,14 @@ public class FirstYearPreviousPaperFragment extends Fragment {
     Button CS,PHYSICS,ELECTRICAL,MECHANICS,DRAWING,MECHANICAL,CHEMISTRY;
     private ProgressDialog progressDialog;
 
-
-    public FirstYearPreviousPaperFragment() {
+    public SecondYearPreviousPaperFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActivity().setTitle("First Year Previous Year Papers");
+        getActivity().setTitle("Second Year Previous Year Papers");
 
         storage = FirebaseStorage.getInstance();
         storageRef = storage.getReference();
@@ -51,8 +49,7 @@ public class FirstYearPreviousPaperFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        View view = inflater.inflate(R.layout.fragment_first_year_previous_paper, container, false);
+        View view = inflater.inflate(R.layout.fragment_second_year_previous_paper, container, false);
         CS = (Button) view.findViewById(R.id.CS_FIRSTYEAR_PAPER_BUTTON);
         PHYSICS = (Button) view.findViewById(R.id.PHYSICS_FIRSTYEAR_PAPER_BUTTON);
         ELECTRICAL = (Button) view.findViewById(R.id.ELECTRICAL_FIRSTYEAR_PAPER_BUTTON);
@@ -107,7 +104,6 @@ public class FirstYearPreviousPaperFragment extends Fragment {
                 downloadFileFromFirebaseStroage();
             }
         });
-
         return view;
     }
 
@@ -150,6 +146,7 @@ public class FirstYearPreviousPaperFragment extends Fragment {
 
 
     }
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

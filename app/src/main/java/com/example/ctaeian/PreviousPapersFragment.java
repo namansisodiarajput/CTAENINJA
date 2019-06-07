@@ -1,6 +1,5 @@
 package com.example.ctaeian;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -30,12 +29,33 @@ public class PreviousPapersFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_previous_papers, container, false);
-        firstYearButton = (Button) view.findViewById(R.id.firstYearPaperButton);
-        secondYearButton = (Button) view.findViewById(R.id.secondYearPaperButton);
-        thirdYearButton = (Button) view.findViewById(R.id.thirdYearPaperButton);
-        fourthYearButton = (Button) view.findViewById(R.id.fourthYearPaperButton);
+        firstYearButton = (Button) view.findViewById(R.id.firstYearPapersButton);
+        secondYearButton = (Button) view.findViewById(R.id.secondYearPapersButton);
+        thirdYearButton = (Button) view.findViewById(R.id.thirdYearPapersButton);
+        fourthYearButton = (Button) view.findViewById(R.id.fourthYearNotesButton);
 
         firstYearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onButtonSelection(v.getId());
+            }
+        });
+
+        secondYearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onButtonSelection(v.getId());
+            }
+        });
+
+        thirdYearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onButtonSelection(v.getId());
+            }
+        });
+
+        fourthYearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onButtonSelection(v.getId());
@@ -52,14 +72,14 @@ public class PreviousPapersFragment extends Fragment {
         Fragment fragment = null;
         Class fragmentClass = null;
 
-        if(id == R.id.firstYearPaperButton) {
+        if(id == R.id.firstYearPapersButton) {
             fragmentClass = FirstYearPreviousPaperFragment.class;
-        } else if(id == R.id.secondYearPaperButton) {
-
-        } else if(id == R.id.thirdYearPaperButton) {
-
-        } else  if(id == R.id.fourthYearButton) {
-
+        } else if(id == R.id.secondYearPapersButton) {
+            fragmentClass = SecondYearPreviousPaperFragment.class;
+        } else if(id == R.id.thirdYearPapersButton) {
+            fragmentClass = ThirdYearPreviousPaperFragment.class;
+        } else  if(id == R.id.firstYearPapersButton) {
+            fragmentClass = FourthYearPreviousPaperFragment.class;
         }
 
         try {

@@ -32,12 +32,33 @@ public class NotesFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_notes, container, false);
 
-        firstYearButton = (Button) view.findViewById(R.id.firstYearPaperButton);
-        secondYearButton = (Button) view.findViewById(R.id.secondYearPaperButton);
-        thirdYearButton = (Button) view.findViewById(R.id.thirdYearPaperButton);
-        fourthYearButton = (Button) view.findViewById(R.id.fourthYearButton);
+        firstYearButton = (Button) view.findViewById(R.id.firstYearNotesButton);
+        secondYearButton = (Button) view.findViewById(R.id.secondYearNotesButton);
+        thirdYearButton = (Button) view.findViewById(R.id.thirdYearNotesButton);
+        fourthYearButton = (Button) view.findViewById(R.id.fourthYearNotesButton);
 
         firstYearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onButtonSelection(v.getId());
+            }
+        });
+
+        secondYearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onButtonSelection(v.getId());
+            }
+        });
+
+        thirdYearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onButtonSelection(v.getId());
+            }
+        });
+
+        fourthYearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onButtonSelection(v.getId());
@@ -53,14 +74,14 @@ public class NotesFragment extends Fragment {
         Fragment fragment = null;
         Class fragmentClass = null;
 
-        if(id == R.id.firstYearPaperButton) {
+        if(id == R.id.firstYearNotesButton) {
             fragmentClass = FirstYearNotesFragment.class;
-        } else if(id == R.id.secondYearPaperButton) {
-
-        } else if(id == R.id.thirdYearPaperButton) {
-
-        } else  if(id == R.id.fourthYearButton) {
-
+        } else if(id == R.id.secondYearNotesButton) {
+            fragmentClass = SecondYearNotesFragment.class;
+        } else if(id == R.id.thirdYearNotesButton) {
+            fragmentClass = ThirdYearNotesFragment.class;
+        } else  if(id == R.id.fourthYearNotesButton) {
+            fragmentClass = FourthYearNotesFragment.class;
         }
 
         try {
@@ -74,12 +95,16 @@ public class NotesFragment extends Fragment {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
 
-    }
+        }
+
+
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 
 
 }

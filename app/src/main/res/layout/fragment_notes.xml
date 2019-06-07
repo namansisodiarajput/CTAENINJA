@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/firstYearPaperButton"
+        android:id="@+id/firstYearNotesButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
-        android:id="@+id/secondYearPaperButton"
+        android:id="@+id/secondYearNotesButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -52,10 +52,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstYearPaperButton" />
+        app:layout_constraintTop_toBottomOf="@+id/firstYearNotesButton" />
 
     <Button
-        android:id="@+id/thirdYearPaperButton"
+        android:id="@+id/thirdYearNotesButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -70,10 +70,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/secondYearPaperButton" />
+        app:layout_constraintTop_toBottomOf="@+id/secondYearNotesButton" />
 
     <Button
-        android:id="@+id/fourthYearButton"
+        android:id="@+id/fourthYearNotesButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -81,14 +81,14 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="fourth year"
-        android:textSize="24sp"
-        android:textColor="#FFFFFF"
         android:background="@color/colorPrimaryDark"
+        android:text="fourth year"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/thirdYearPaperButton" />
+        app:layout_constraintTop_toBottomOf="@+id/thirdYearNotesButton" />
 
 
 </android.support.constraint.ConstraintLayout>

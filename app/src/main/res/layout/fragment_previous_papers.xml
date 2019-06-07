@@ -4,25 +4,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".PreviousPapersFragment">
+    tools:context=".PreviousPapersFragment"
+    android:background="#66BB6A">
 
-    <Button
-        android:id="@+id/firstYearPaperButton"
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="First Year"
-        android:textSize="18sp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/notes"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/secondYearPaperButton"
+        android:id="@+id/firstYearPapersButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="First Year"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/secondYearPapersButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -31,13 +46,15 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="Second Year"
-        android:textSize="18sp"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstYearPaperButton" />
+        app:layout_constraintTop_toBottomOf="@+id/firstYearPapersButton" />
 
     <Button
-        android:id="@+id/thirdYearPaperButton"
+        android:id="@+id/thirdYearPapersButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -46,13 +63,15 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="Third year"
-        android:textSize="18sp"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/secondYearPaperButton" />
+        app:layout_constraintTop_toBottomOf="@+id/secondYearPapersButton" />
 
     <Button
-        android:id="@+id/fourthYearPaperButton"
+        android:id="@+id/fourthYearPapersButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -60,10 +79,12 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:background="@color/colorPrimaryDark"
         android:text="fourth year"
-        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/thirdYearPaperButton" />
+        app:layout_constraintTop_toBottomOf="@+id/thirdYearPapersButton" />
 
 </android.support.constraint.ConstraintLayout>
