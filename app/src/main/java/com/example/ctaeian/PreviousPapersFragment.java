@@ -1,5 +1,6 @@
 package com.example.ctaeian;
 
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,32 +11,29 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 
-public class NotesFragment extends Fragment {
+public class PreviousPapersFragment extends Fragment {
 
     Button firstYearButton,secondYearButton,thirdYearButton,fourthYearButton;
 
-    public NotesFragment() {
+    public PreviousPapersFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActivity().setTitle("Notes");
-
+        getActivity().setTitle("Previous Year Paper");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_notes, container, false);
-
+        View view = inflater.inflate(R.layout.fragment_previous_papers, container, false);
         firstYearButton = (Button) view.findViewById(R.id.firstYearPaperButton);
         secondYearButton = (Button) view.findViewById(R.id.secondYearPaperButton);
         thirdYearButton = (Button) view.findViewById(R.id.thirdYearPaperButton);
-        fourthYearButton = (Button) view.findViewById(R.id.fourthYearButton);
+        fourthYearButton = (Button) view.findViewById(R.id.fourthYearPaperButton);
 
         firstYearButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,8 +43,9 @@ public class NotesFragment extends Fragment {
         });
 
 
-        return  view;
+        return view;
     }
+
 
     private void onButtonSelection(int id) {
 
@@ -54,7 +53,7 @@ public class NotesFragment extends Fragment {
         Class fragmentClass = null;
 
         if(id == R.id.firstYearPaperButton) {
-            fragmentClass = FirstYearNotesFragment.class;
+            fragmentClass = FirstYearPreviousPaperFragment.class;
         } else if(id == R.id.secondYearPaperButton) {
 
         } else if(id == R.id.thirdYearPaperButton) {
@@ -80,6 +79,4 @@ public class NotesFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-
-
 }

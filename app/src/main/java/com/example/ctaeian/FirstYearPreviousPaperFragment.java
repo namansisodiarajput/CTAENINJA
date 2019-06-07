@@ -15,14 +15,13 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.iid.MessagingChannel;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
 
-public class FirstYearNotesFragment extends Fragment {
+public class FirstYearPreviousPaperFragment extends Fragment {
 
     FirebaseStorage storage;
     // Create a storage reference from our app
@@ -31,16 +30,15 @@ public class FirstYearNotesFragment extends Fragment {
     Button CS,PHYSICS,ELECTRICAL,MECHANICS,DRAWING,MECHANICAL,CHEMISTRY;
     private ProgressDialog progressDialog;
 
-    public FirstYearNotesFragment() {
+
+    public FirstYearPreviousPaperFragment() {
         // Required empty public constructor
     }
-
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActivity().setTitle("First Year Notes");
 
         storage = FirebaseStorage.getInstance();
         storageRef = storage.getReference();
@@ -52,14 +50,15 @@ public class FirstYearNotesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_first_year_notes, container, false);
-        CS = (Button) view.findViewById(R.id.CS_FIRSTYEAR_BUTTON);
-        PHYSICS = (Button) view.findViewById(R.id.PHYSICS_FIRSTYEAR_BUTTON);
-        ELECTRICAL = (Button) view.findViewById(R.id.ELECTRICAL_FIRSTYEAR_BUTTON);
-        MECHANICS = (Button) view.findViewById(R.id.MECHANICS_FIRSTYEAR_BUTTON);
-        DRAWING = (Button) view.findViewById(R.id.DRAWING_FIRSTYEAR_BUTTON);
-        MECHANICAL = (Button) view.findViewById(R.id.MECHANICAL_FIRSTYEAR_BUTTON);
-        CHEMISTRY = (Button) view.findViewById(R.id.CHEMISTRY_FIRSTYEAR_BUTTON);
+
+        View view = inflater.inflate(R.layout.fragment_first_year_previous_paper, container, false);
+        CS = (Button) view.findViewById(R.id.CS_FIRSTYEAR_PAPER_BUTTON);
+        PHYSICS = (Button) view.findViewById(R.id.PHYSICS_FIRSTYEAR_PAPER_BUTTON);
+        ELECTRICAL = (Button) view.findViewById(R.id.ELECTRICAL_FIRSTYEAR_PAPER_BUTTON);
+        MECHANICS = (Button) view.findViewById(R.id.MECHANICS_FIRSTYEAR_PAPER_BUTTON);
+        DRAWING = (Button) view.findViewById(R.id.DRAWING_FIRSTYEAR_PAPER_BUTTON);
+        MECHANICAL = (Button) view.findViewById(R.id.MECHANICAL_FIRSTYEAR_PAPER_BUTTON);
+        CHEMISTRY = (Button) view.findViewById(R.id.CHEMISTRY_FIRSTYEAR_PAPER_BUTTON);
 
         CS.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -150,8 +149,6 @@ public class FirstYearNotesFragment extends Fragment {
 
 
     }
-
-
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
