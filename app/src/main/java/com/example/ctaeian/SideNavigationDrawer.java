@@ -92,6 +92,8 @@ public class SideNavigationDrawer extends AppCompatActivity
             fragmentClass = PreviousPapersFragment.class;
         } else if (id == R.id.nav_clubs) {
             fragmentClass = ClubFragment.class;
+        } else if (id == R.id.nav_facultyinformation) {
+            fragmentClass = FacultyInformationFragment.class;
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
