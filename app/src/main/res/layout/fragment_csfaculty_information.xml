@@ -1,73 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".HomeFragment">
+    tools:context=".CSFacultyInformationFragment"
+    android:background="#66BB6A">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:columnCount="2"
+            android:weightSum="2">
+
             <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="@android:color/white"
-                app:cardCornerRadius="0dp"
-                app:cardMaxElevation="1dp"
-                app:cardElevation="0.7dp"
-                app:contentPadding="10dp"
-                app:contentPaddingBottom="0dp"
-                app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true"
-                android:id="@+id/cardView">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="180dp"
-                        android:scaleType="centerCrop"
-                        android:id="@+id/img"
-                        android:src="@drawable/home1"
-                        android:contentDescription="CardImageViewDesc" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_below="@id/img"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:fontFamily="sans-serif"
-                        android:gravity="center_vertical"
-                        android:text=" The college has a rich infrastructure with well-equipped laboratories in each department having modern state-of-art instruments/equipment to provide the hands-on training to the students. Besides laboratoriesThe computer center of the college has excellent facilities for conducting the practicals and imparting training to students. 24x7 internet connectivity with 155 mbps through NKN is provided using OFC backbone"
-                        android:textSize="18sp" />
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:background="@color/colorPrimaryDark"
-                        android:layout_below="@id/img"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:contentDescription="FavButtonDesc" />
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
                 app:cardBackgroundColor="@android:color/white"
                 app:cardCornerRadius="0dp"
                 app:cardMaxElevation="1dp"
@@ -84,10 +37,10 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="180dp"
+                        android:layout_height="200dp"
                         android:scaleType="centerCrop"
                         android:id="@+id/img2"
-                        android:src="@drawable/home2"
+                        android:background="@drawable/navneet"
                         android:contentDescription="CardImageViewDesc" />
 
                     <TextView
@@ -98,8 +51,8 @@
                         android:layout_marginLeft="5dp"
                         android:fontFamily="sans-serif"
                         android:gravity="center_vertical"
-                        android:text="The College of Technology and Engineering, Udaipur (CTAE) is a constituent college of the Maharana Pratap University of Agriculture and Technology, Udaipur. The college was started in 1964 with a Graduate Programme in Agricultural Engineering. Presently the CTAE has undergraduate degree programmes in 8 branches"
-                        android:textSize="18sp" />
+                        android:text="Name - Dr.Naveen Choudhary\nDesignation - Head of computer scienc department\nEmailaddress - naveenc121@yahoo.com\nPhone No. - 9352356102"
+                        android:textSize="14sp" />
 
                     <ImageButton
                         android:layout_width="wrap_content"
@@ -117,8 +70,9 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
                 app:cardBackgroundColor="@android:color/white"
                 app:cardCornerRadius="0dp"
                 app:cardMaxElevation="1dp"
@@ -127,7 +81,7 @@
                 app:contentPaddingBottom="0dp"
                 app:cardPreventCornerOverlap="true"
                 app:cardUseCompatPadding="true"
-                android:id="@+id/cardView3">
+                android:id="@+id/cardView">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -135,22 +89,22 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="180dp"
+                        android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:id="@+id/img3"
-                        android:src="@drawable/home3"
+                        android:id="@+id/img"
+                        android:background="@drawable/kalpana"
                         android:contentDescription="CardImageViewDesc" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_below="@id/img3"
-                        android:layout_marginStart="5dp"
+                        android:layout_below="@id/img"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif"
                         android:gravity="center_vertical"
-                        android:text=" Farmers Fair of Farm Machinery. Organised on 7th Dec 2018 to 14th Dec 2018.A modern Instructional farm of about 17 ha is used to impart practical training to the students in the operation of farm machines and equipment, modern irrigation and drainage system and processing operations."
-                        android:textSize="18sp" />
+                        android:text="Name - Mrs. Kalpana Jain\nDesignation - Assistant Professor\nEmail address - kalpana@mpuat.ac.in\nPhone No. - 2470305(O)"
+                        android:textSize="14sp" />
 
                     <ImageButton
                         android:layout_width="wrap_content"
@@ -158,7 +112,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:background="@color/colorPrimaryDark"
-                        android:layout_below="@id/img3"
+                        android:layout_below="@id/img"
                         android:layout_marginRight="5dp"
                         android:layout_marginEnd="5dp"
                         android:contentDescription="FavButtonDesc" />
@@ -167,60 +121,11 @@
 
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="@android:color/white"
-                app:cardCornerRadius="0dp"
-                app:cardMaxElevation="1dp"
-                app:cardElevation="0.7dp"
-                app:contentPadding="10dp"
-                app:contentPaddingBottom="0dp"
-                app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true"
-                android:id="@+id/cardView4">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="180dp"
-                        android:scaleType="centerCrop"
-                        android:id="@+id/img4"
-                        android:src="@drawable/home4"
-                        android:contentDescription="CardImageViewDesc" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_below="@id/img4"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:fontFamily="sans-serif"
-                        android:gravity="center_vertical"
-                        android:text=" There are various sports,spiritual,and techinal functions has been organised in the college in the successsive period of time like cricket competitions, technical fests and Yoga centers are the ne=ame of few. The college also sponsers industrial visits for the students where they can go out and learn from others. "
-                        android:textSize="18sp" />
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:background="@color/colorPrimaryDark"
-                        android:layout_below="@id/img4"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:contentDescription="FavButtonDesc" />
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
                 app:cardBackgroundColor="@android:color/white"
                 app:cardCornerRadius="0dp"
                 app:cardMaxElevation="1dp"
@@ -237,22 +142,22 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="180dp"
+                        android:layout_height="200dp"
                         android:scaleType="centerCrop"
                         android:id="@+id/img5"
-                        android:src="@drawable/home5"
+                        android:background="@drawable/palak"
                         android:contentDescription="CardImageViewDesc" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/img5"
-                        android:layout_marginStart="5dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif"
                         android:gravity="center_vertical"
-                        android:text="The college has its own play grounds and courts for all games including a mini gymnasium. The nearby university sports complex is also available for the students. The Facilities of bank, post office, and canteen are also there in the college campus. The indoor has its own basketball ground and Gym."
-                        android:textSize="18sp" />
+                        android:text="Name - Palak Jain\nDesignation - Assistant Professor (NPIU)\nEmailaddress - palakmanit@gmail.com"
+                        android:textSize="14sp" />
 
                     <ImageButton
                         android:layout_width="wrap_content"
@@ -269,7 +174,165 @@
 
             </android.support.v7.widget.CardView>
 
-        </LinearLayout>
+            <android.support.v7.widget.CardView
+                android:layout_columnWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="0dp"
+                app:cardMaxElevation="1dp"
+                app:cardElevation="0.7dp"
+                app:contentPadding="10dp"
+                app:contentPaddingBottom="0dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                android:id="@+id/cardView6">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/img6"
+                        android:background="@drawable/diksha"
+                        android:contentDescription="CardImageViewDesc" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/img6"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_vertical"
+                        android:text="Name - Diksha Goyal\nDesignation - Assistant Professor (NPIU)\nEmailaddress - 28diksha@gmail.com"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_below="@id/img6"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="FavButtonDesc" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_columnWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="0dp"
+                app:cardMaxElevation="1dp"
+                app:cardElevation="0.7dp"
+                app:contentPadding="10dp"
+                app:contentPaddingBottom="0dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                android:id="@+id/cardView7">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/img7"
+                        android:background="@drawable/rajdeep"
+                        android:contentDescription="CardImageViewDesc" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/img7"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_vertical"
+                        android:text="Name - Rajdeep Singh Shaktawat\nDesignation - Assistant Professor (NPIU)\mEmailaddress - ?Shaktawat.rd@gmail.com\nPhone No. - 7737308008"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_below="@id/img7"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="FavButtonDesc" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_columnWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="0dp"
+                app:cardMaxElevation="1dp"
+                app:cardElevation="0.7dp"
+                app:contentPadding="10dp"
+                app:contentPaddingBottom="0dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                android:id="@+id/cardView8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/img8"
+                        android:background="@drawable/hemwati"
+                        android:contentDescription="CardImageViewDesc" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/img8"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_vertical"
+                        android:text="Name - ﻿Hemwati Kumawat﻿\nQualification - ﻿﻿M.Tech B.Tech\nEmailaddress - ﻿hemwati18@gmail.com﻿"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_below="@id/img8"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="FavButtonDesc" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </GridLayout>
     </ScrollView>
 
-</LinearLayout>
+</FrameLayout>

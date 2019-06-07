@@ -32,9 +32,9 @@ public class NotesFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_notes, container, false);
 
-        firstYearButton = (Button) view.findViewById(R.id.firstYearNotesButton);
-        secondYearButton = (Button) view.findViewById(R.id.secondYearNotesButton);
-        thirdYearButton = (Button) view.findViewById(R.id.thirdYearNotesButton);
+        firstYearButton = (Button) view.findViewById(R.id.CS);
+        secondYearButton = (Button) view.findViewById(R.id.ELECTRICAL);
+        thirdYearButton = (Button) view.findViewById(R.id.AGRICULTURE);
         fourthYearButton = (Button) view.findViewById(R.id.fourthYearNotesButton);
 
         firstYearButton.setOnClickListener(new View.OnClickListener() {
@@ -74,11 +74,11 @@ public class NotesFragment extends Fragment {
         Fragment fragment = null;
         Class fragmentClass = null;
 
-        if(id == R.id.firstYearNotesButton) {
+        if(id == R.id.CS) {
             fragmentClass = FirstYearNotesFragment.class;
-        } else if(id == R.id.secondYearNotesButton) {
+        } else if(id == R.id.ELECTRICAL) {
             fragmentClass = SecondYearNotesFragment.class;
-        } else if(id == R.id.thirdYearNotesButton) {
+        } else if(id == R.id.AGRICULTURE) {
             fragmentClass = ThirdYearNotesFragment.class;
         } else  if(id == R.id.fourthYearNotesButton) {
             fragmentClass = FourthYearNotesFragment.class;

@@ -10,19 +10,19 @@
             android:title="Home" />
         <item
             android:id="@+id/nav_notes"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_menu_camera"
             android:title="Notes" />
         <item
             android:id="@+id/nav_exampapers"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_menu_camera"
             android:title="Previous year Papers" />
         <item
             android:id="@+id/nav_clubs"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_camera"
             android:title="Clubs" />
         <item
             android:id="@+id/nav_facultyinformation"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_camera"
             android:title="Faculty Information" />
     </group>
 
