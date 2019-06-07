@@ -32,7 +32,7 @@ public class PreviousPapersFragment extends Fragment {
         firstYearButton = (Button) view.findViewById(R.id.firstYearPapersButton);
         secondYearButton = (Button) view.findViewById(R.id.secondYearPapersButton);
         thirdYearButton = (Button) view.findViewById(R.id.thirdYearPapersButton);
-        fourthYearButton = (Button) view.findViewById(R.id.fourthYearNotesButton);
+        fourthYearButton = (Button) view.findViewById(R.id.fourthYearPapersButton);
 
         firstYearButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +78,7 @@ public class PreviousPapersFragment extends Fragment {
             fragmentClass = SecondYearPreviousPaperFragment.class;
         } else if(id == R.id.thirdYearPapersButton) {
             fragmentClass = ThirdYearPreviousPaperFragment.class;
-        } else  if(id == R.id.firstYearPapersButton) {
+        } else  if(id == R.id.fourthYearPapersButton) {
             fragmentClass = FourthYearPreviousPaperFragment.class;
         }
 

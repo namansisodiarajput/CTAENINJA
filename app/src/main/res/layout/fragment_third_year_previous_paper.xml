@@ -36,7 +36,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/CS_FIRSTYEAR_BUTTON"
+                android:id="@+id/CS_FIRSTYEAR_PAPER_BUTTON"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -50,7 +50,7 @@
                 tools:layout_editor_absoluteY="250dp" />
 
             <Button
-                android:id="@+id/PHYSICS_FIRSTYEAR_BUTTON"
+                android:id="@+id/PHYSICS_FIRSTYEAR_PAPER_BUTTON"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -64,7 +64,7 @@
                 tools:layout_editor_absoluteY="250dp" />
 
             <Button
-                android:id="@+id/ELECTRICAL_FIRSTYEAR_BUTTON"
+                android:id="@+id/ELECTRICAL_FIRSTYEAR_PAPER_BUTTON"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -78,7 +78,7 @@
                 tools:layout_editor_absoluteY="250dp" />
 
             <Button
-                android:id="@+id/MECHANICS_FIRSTYEAR_BUTTON"
+                android:id="@+id/MECHANICS_FIRSTYEAR_PAPER_BUTTON"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -92,7 +92,7 @@
                 tools:layout_editor_absoluteY="250dp" />
 
             <Button
-                android:id="@+id/DRAWING_FIRSTYEAR_BUTTON"
+                android:id="@+id/DRAWING_FIRSTYEAR_PAPER_BUTTON"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -106,7 +106,7 @@
                 tools:layout_editor_absoluteY="250dp" />
 
             <Button
-                android:id="@+id/MECHANICAL_FIRSTYEAR_BUTTON"
+                android:id="@+id/MECHANICAL_FIRSTYEAR_PAPER_BUTTON"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -120,7 +120,7 @@
                 tools:layout_editor_absoluteY="250dp" />
 
             <Button
-                android:id="@+id/CHEMISTRY_FIRSTYEAR_BUTTON"
+                android:id="@+id/CHEMISTRY_FIRSTYEAR_PAPER_BUTTON"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
