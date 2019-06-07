@@ -16,7 +16,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="64dp"
+        android:background="#66BB6A"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +84,8 @@
             android:layout_marginTop="10dp"
             android:onClick="userLogin"
             android:text="LOGIN"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            />
 
         <Button
             android:id="@+id/RegisterButtonPage"
@@ -93,18 +95,23 @@
             android:layout_marginTop="10dp"
             android:onClick="redirectRegisterPage"
             android:text="CLICK HERE TO REGISTER"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            />
 
 
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="@color/colorAccent"
-        android:layout_marginTop="7dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:src="@drawable/ctae"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
