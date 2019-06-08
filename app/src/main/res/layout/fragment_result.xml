@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NotesFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ResultFragment"
     android:background="#66BB6A">
 
     <ImageView
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/firstYearNotesButton"
+        android:id="@+id/RESULT_FIRST_YEAR"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
-        android:id="@+id/secondYearNotesButton"
+        android:id="@+id/RESULT_SECOND_YEAR"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -52,10 +52,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstYearNotesButton" />
+        app:layout_constraintTop_toBottomOf="@+id/RESULT_FIRST_YEAR" />
 
     <Button
-        android:id="@+id/thirdYearNotesButton"
+        android:id="@+id/RESULT_THIRD_YEAR"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -70,10 +70,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/secondYearNotesButton" />
+        app:layout_constraintTop_toBottomOf="@+id/RESULT_SECOND_YEAR" />
 
     <Button
-        android:id="@+id/fourthYearNotesButton"
+        android:id="@+id/RESULT_FOURTH_YEAR"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -88,7 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/thirdYearNotesButton" />
+        app:layout_constraintTop_toBottomOf="@+id/RESULT_THIRD_YEAR" />
 
 
 </android.support.constraint.ConstraintLayout>

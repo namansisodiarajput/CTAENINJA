@@ -1,5 +1,6 @@
 package com.example.ctaeian;
 
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,32 +11,31 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 
-public class NotesFragment extends Fragment {
-
+public class AttendanceFragment extends Fragment {
     Button firstYearButton,secondYearButton,thirdYearButton,fourthYearButton;
 
-    public NotesFragment() {
+    public AttendanceFragment() {
         // Required empty public constructor
     }
+
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActivity().setTitle("Notes");
-
+        getActivity().setTitle("ATTENDENCE");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_notes, container, false);
+        View view = inflater.inflate(R.layout.fragment_attendance, container, false);
 
-        firstYearButton = (Button) view.findViewById(R.id.firstYearNotesButton);
-        secondYearButton = (Button) view.findViewById(R.id.secondYearNotesButton);
-        thirdYearButton = (Button) view.findViewById(R.id.thirdYearNotesButton);
-        fourthYearButton = (Button) view.findViewById(R.id.fourthYearNotesButton);
+        firstYearButton = (Button) view.findViewById(R.id.ATTENDENCE_FIRST_YEAR);
+        secondYearButton = (Button) view.findViewById(R.id.ATTENDENCE_SECOND_YEAR);
+        thirdYearButton = (Button) view.findViewById(R.id.ATTENDENCE_THIRD_YEAR);
+        fourthYearButton = (Button) view.findViewById(R.id.ATTENDENCE_FOURTH_YEAR);
 
         firstYearButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +66,7 @@ public class NotesFragment extends Fragment {
         });
 
 
-        return  view;
+        return view;
     }
 
     private void onButtonSelection(int id) {
@@ -74,14 +74,14 @@ public class NotesFragment extends Fragment {
         Fragment fragment = null;
         Class fragmentClass = null;
 
-        if(id == R.id.firstYearNotesButton) {
-            fragmentClass = FirstYearNotesFragment.class;
-        } else if(id == R.id.secondYearNotesButton) {
-            fragmentClass = SecondYearNotesFragment.class;
-        } else if(id == R.id.thirdYearNotesButton) {
-            fragmentClass = ThirdYearNotesFragment.class;
-        } else  if(id == R.id.fourthYearNotesButton) {
-            fragmentClass = FourthYearNotesFragment.class;
+        if(id == R.id.ATTENDENCE_FIRST_YEAR) {
+            fragmentClass = AttendanceFirstYearFragment.class;
+        } else if(id == R.id.ATTENDENCE_SECOND_YEAR) {
+            fragmentClass = AttendanceFirstYearFragment.class;
+        } else if(id == R.id.ATTENDENCE_THIRD_YEAR) {
+            fragmentClass = AttendanceFirstYearFragment.class;
+        } else  if(id == R.id.ATTENDENCE_FOURTH_YEAR) {
+            fragmentClass = AttendanceFirstYearFragment.class;
         }
 
         try {
@@ -95,7 +95,9 @@ public class NotesFragment extends Fragment {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
 
-        }
+    }
+
+
 
 
 
@@ -103,8 +105,4 @@ public class NotesFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-
-
-
-
 }

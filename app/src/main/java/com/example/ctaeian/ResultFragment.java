@@ -1,20 +1,30 @@
 package com.example.ctaeian;
 
+import android.app.DownloadManager;
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.StorageReference;
+
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
 
-public class NotesFragment extends Fragment {
+public class ResultFragment extends Fragment {
 
     Button firstYearButton,secondYearButton,thirdYearButton,fourthYearButton;
 
-    public NotesFragment() {
+    public ResultFragment() {
         // Required empty public constructor
     }
 
@@ -22,20 +32,18 @@ public class NotesFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActivity().setTitle("Notes");
-
+        getActivity().setTitle("RESULT");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_notes, container, false);
-
-        firstYearButton = (Button) view.findViewById(R.id.firstYearNotesButton);
-        secondYearButton = (Button) view.findViewById(R.id.secondYearNotesButton);
-        thirdYearButton = (Button) view.findViewById(R.id.thirdYearNotesButton);
-        fourthYearButton = (Button) view.findViewById(R.id.fourthYearNotesButton);
+        View view = inflater.inflate(R.layout.fragment_result, container, false);
+        firstYearButton = (Button) view.findViewById(R.id.RESULT_FIRST_YEAR);
+        secondYearButton = (Button) view.findViewById(R.id.RESULT_SECOND_YEAR);
+        thirdYearButton = (Button) view.findViewById(R.id.RESULT_THIRD_YEAR);
+        fourthYearButton = (Button) view.findViewById(R.id.RESULT_FOURTH_YEAR);
 
         firstYearButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +74,7 @@ public class NotesFragment extends Fragment {
         });
 
 
-        return  view;
+        return view;
     }
 
     private void onButtonSelection(int id) {
@@ -74,14 +82,14 @@ public class NotesFragment extends Fragment {
         Fragment fragment = null;
         Class fragmentClass = null;
 
-        if(id == R.id.firstYearNotesButton) {
-            fragmentClass = FirstYearNotesFragment.class;
-        } else if(id == R.id.secondYearNotesButton) {
-            fragmentClass = SecondYearNotesFragment.class;
-        } else if(id == R.id.thirdYearNotesButton) {
-            fragmentClass = ThirdYearNotesFragment.class;
-        } else  if(id == R.id.fourthYearNotesButton) {
-            fragmentClass = FourthYearNotesFragment.class;
+        if(id == R.id.RESULT_FIRST_YEAR) {
+            fragmentClass = ResultFirstYearFragment.class;
+        } else if(id == R.id.RESULT_SECOND_YEAR) {
+            fragmentClass = ResultFirstYearFragment.class;
+        } else if(id == R.id.RESULT_THIRD_YEAR) {
+            fragmentClass = ResultFirstYearFragment.class;
+        } else  if(id == R.id.RESULT_FOURTH_YEAR) {
+            fragmentClass = ResultFirstYearFragment.class;
         }
 
         try {
@@ -95,7 +103,11 @@ public class NotesFragment extends Fragment {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
 
-        }
+    }
+
+
+
+
 
 
 
@@ -103,8 +115,4 @@ public class NotesFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-
-
-
-
 }

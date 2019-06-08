@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ClubFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#66BB6A">
 
 
     <ScrollView
@@ -18,7 +19,7 @@
             android:orientation="vertical">
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
                 app:cardBackgroundColor="@android:color/white"
                 app:cardCornerRadius="0dp"
                 app:cardMaxElevation="1dp"
@@ -38,37 +39,26 @@
                         android:layout_height="180dp"
                         android:scaleType="centerCrop"
                         android:id="@+id/img"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/android"
                         android:contentDescription="CardImageViewDesc" />
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/img"
                         android:layout_marginLeft="5dp"
                         android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif"
                         android:gravity="center_vertical"
-                        android:text="Joshua Sortino - Via Unsplash"
+                        android:text="Android Development Club\nDesign and develop useful Android applications with compelling user interfaces and rich map-based applications.Learn technical skills to create design and solve real-life situations. It provides help in their curriculum."
                         android:textSize="18sp" />
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:background="@color/colorPrimaryDark"
-                        android:layout_below="@id/img"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:contentDescription="FavButtonDesc" />
 
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
                 app:cardBackgroundColor="@android:color/white"
                 app:cardCornerRadius="0dp"
                 app:cardMaxElevation="1dp"
@@ -88,30 +78,19 @@
                         android:layout_height="180dp"
                         android:scaleType="centerCrop"
                         android:id="@+id/img2"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/ml"
                         android:contentDescription="CardImageViewDesc" />
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/img2"
                         android:layout_marginLeft="5dp"
                         android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif"
                         android:gravity="center_vertical"
-                        android:text="Joshua Sortino - Via Unsplash"
+                        android:text="Machine Learning Club\nDevelop the design and programming skills that will help to build intelligent, adaptive artifacts. Build new and/or leverage existing algorithms to learn from data, in order to build generalize models that give accurate predictions, or to find patterns, particularly with new and unseen similar data.Introduce students to state-of-the-art methods and modern programming tools for data analysis."
                         android:textSize="18sp" />
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:background="@color/colorPrimaryDark"
-                        android:layout_below="@id/img2"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:contentDescription="FavButtonDesc" />
 
                 </RelativeLayout>
 
@@ -119,7 +98,7 @@
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
                 app:cardBackgroundColor="@android:color/white"
                 app:cardCornerRadius="0dp"
                 app:cardMaxElevation="1dp"
@@ -139,12 +118,12 @@
                         android:layout_height="180dp"
                         android:scaleType="centerCrop"
                         android:id="@+id/img3"
-                        android:background="@color/colorPrimary"
-                        android:contentDescription="CardImageViewDesc" />
+                        android:background="@drawable/competitive"
+                        android:contentDescription="Competitive Programming Club\nDevelop creative thinking, construct knowledge and develop innovative products.Helps students preparing for IT companies, competitive coding events." />
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/img3"
                         android:layout_marginLeft="5dp"
                         android:layout_marginStart="5dp"
@@ -153,24 +132,13 @@
                         android:text="Joshua Sortino - Via Unsplash"
                         android:textSize="18sp" />
 
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:background="@color/colorPrimaryDark"
-                        android:layout_below="@id/img3"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:contentDescription="FavButtonDesc" />
-
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
                 app:cardBackgroundColor="@android:color/white"
                 app:cardCornerRadius="0dp"
                 app:cardMaxElevation="1dp"
@@ -190,34 +158,66 @@
                         android:layout_height="180dp"
                         android:scaleType="centerCrop"
                         android:id="@+id/img4"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/web"
                         android:contentDescription="CardImageViewDesc" />
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/img4"
                         android:layout_marginLeft="5dp"
                         android:layout_marginStart="5dp"
                         android:fontFamily="sans-serif"
                         android:gravity="center_vertical"
-                        android:text="Joshua Sortino - Via Unsplash"
+                        android:text="Web Development Club\nGain the skills and project-based experience needed for entry into web design and development careers. Develop awareness and appreciation of the myriad ways that people access the web and will be able to create standard-based websites that are accessible and usable by a full spectrum of users"
                         android:textSize="18sp" />
 
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:background="@color/colorPrimaryDark"
-                        android:layout_below="@id/img4"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:contentDescription="FavButtonDesc" />
 
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="0dp"
+                app:cardMaxElevation="1dp"
+                app:cardElevation="0.7dp"
+                app:contentPadding="10dp"
+                app:contentPaddingBottom="0dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true"
+                android:id="@+id/cardView5">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/img5"
+                        android:background="@drawable/robotics"
+                        android:contentDescription="CardImageViewDesc" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img5"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_vertical"
+                        android:text="Robotics Club\nbotics is a rapidly growing field, as we continue to research, design and build new robots that serve various practical purposes including domestic, commercial and military. The club today is an active platform for students to display and develop their practical machine building skills and knowledge. "
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
 
         </LinearLayout>
     </ScrollView>
